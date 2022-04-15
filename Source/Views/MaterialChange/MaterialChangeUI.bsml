@@ -1,0 +1,34 @@
+﻿<bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
+	<vertical pad-top="1" child-control-height="false" child-expand-height="false">
+		<tab-selector tab-tag="yo" />
+	</vertical>
+	<vertical pad-top="10" child-control-height="false" child-expand-height="false">
+		<tab tab-name="MaterialChange" tags="yo" >
+			<vertical pad-top="1" child-control-height="false" child-expand-height="false">
+				<page-button event-click='MaterialChangeList#PageUp' direction='Up' />
+				<list id='MaterialChangeList' visible-cells='5' expand-cell='true' select-cell='materialSelect' />
+				<page-button event-click='MaterialChangeList#PageDown' direction='Down' />
+			</vertical>
+			<vertical pad-top="53" preferred-width="60" child-control-height="false" child-expand-height="false">
+				<horizontal bg='panel-top' pad-left='10' pad-right='10' horizontal-fit='PreferredSize'>
+					<toggle-setting preferred-width="40" preferred-height="12" text="Auto Change" value="AutoChangeToggle"  on-change="OnAutoChangeStateChange"/>
+					<button preferred-width="40" preferred-height="12" text="Material Change Start" on-click="goMaterialChange"/>
+					<button preferred-width="40" preferred-height="12" text="Save" on-click="Save"/>
+				</horizontal>
+			</vertical>	
+		</tab>
+		<tab tab-name="AvatarCopy" tags="yo">
+			<vertical pad-top="1" preferred-width="60" child-control-height="false" child-expand-height="false">
+				<button preferred-width="80" preferred-height="12" text="AvatarCopy To WorldPos" on-click="copy-avatarWPos"/>
+				<button preferred-width="80" preferred-height="12" text="AvatarCopy To WorldPos(Timer 5Sec)" on-click="copy-avatarWPosTimer"/>
+				<button preferred-width="80" preferred-height="12" text="AvatarCopy To AvatarPos" on-click="copy-avatarAPos"/>
+				<button preferred-width="80" preferred-height="12" text="AvatarCopy To AvatarPos(Timer 5Sec)" on-click="copy-avatarAPosTimer"/>
+			</vertical>
+			<vertical pad-top="50" preferred-width="60" child-control-height="false" child-expand-height="false">
+				<button preferred-width="80" preferred-height="12" text="Avatar Clear" on-click="copy-avatarDestroy"/>
+				<toggle-setting text="Auto Destroy" value="DestroyState"  on-change="auto-AvatarDestroyStateChange" />
+			</vertical>
+		</tab>
+	</vertical>
+</bg>
+
